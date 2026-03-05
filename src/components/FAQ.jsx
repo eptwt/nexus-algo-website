@@ -4,11 +4,11 @@ import { ChevronDown, HelpCircle } from 'lucide-react'
 const faqs = [
   {
     q: 'Does Nexus Algo work on the free version of TradingView?',
-    a: 'Yes! Nexus Algo works on all TradingView plans, including the free version. You can add all three indicators to your chart regardless of your TradingView subscription tier.',
+    a: 'Nexus Algo requires TradingView Essential or higher. The free TradingView plan only allows 2 indicators per chart, and the full Nexus Algo system uses 3 indicators (PRO, Oscillator, and News Ghost). We recommend TradingView Essential or Plus for the best experience.',
   },
   {
     q: 'What markets and timeframes does it support?',
-    a: 'Nexus Algo works on all markets available on TradingView — Forex, Crypto, Stocks, Futures, Indices, and Commodities. It supports all timeframes from 1-minute to monthly charts.',
+    a: 'Nexus Algo works on all markets available on TradingView - Forex, Crypto, Stocks, Futures, Indices, and Commodities. It supports all timeframes from 1-minute to monthly charts.',
   },
   {
     q: 'Do the signals repaint?',
@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     q: "What's included in the 7-day trial?",
-    a: 'Full access to everything — all 3 indicators (PRO, Oscillator, News Ghost), all 7 named trading strategies, the Discord community, strategy guides, and all alert conditions. No features are locked during the trial.',
+    a: 'Full access to everything - all 3 indicators (PRO, Oscillator, News Ghost), all 7 named trading strategies, the Discord community, strategy guides, and all alert conditions. No features are locked during the trial.',
   },
   {
     q: 'How do I add Nexus Algo to my TradingView charts?',
@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: 'Can I cancel my subscription anytime?',
-    a: 'Absolutely. You can cancel at any time from your account dashboard. If you cancel within the first 7 days, you receive a full refund — no questions asked.',
+    a: 'Absolutely. You can cancel at any time from your account dashboard. If you cancel within the first 7 days, you receive a full refund - no questions asked.',
   },
   {
     q: 'Is the News Ghost included with all plans?',
@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: 'Should I trade every signal that appears on my chart?',
-    a: "No — and that's the point of the tiered system. Signals give you directional bias, but you should pair them with a named strategy and confirm with the Oscillator before entering a trade. The workflow helps you filter setups.",
+    a: "No - and that's the point of the tiered system. Signals give you directional bias, but you should pair them with a named strategy and confirm with the Oscillator before entering a trade. The workflow helps you filter setups.",
   },
   {
     q: 'What are the named strategies and how do I use them?',

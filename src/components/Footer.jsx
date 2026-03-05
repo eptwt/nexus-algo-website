@@ -85,6 +85,11 @@ export default function Footer() {
           <div className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
           <span className="text-xs text-muted-foreground">All systems operational</span>
         </div>
+
+        {/* Disclaimer */}
+        <p className="mt-8 text-[10px] text-muted-foreground/50 text-center leading-relaxed max-w-3xl mx-auto">
+          Nexus Algo does not provide financial advice. All tools are for educational and analytical purposes only. Trading involves risk and past performance does not guarantee future results. You are responsible for your own trading decisions.
+        </p>
       </div>
     </footer>
   )

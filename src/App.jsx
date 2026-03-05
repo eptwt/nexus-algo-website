@@ -4,12 +4,13 @@ import VSL from './components/VSL'
 import TrustBar from './components/TrustBar'
 import SuiteOverview from './components/SuiteOverview'
 import FeatureCards from './components/FeatureCards'
-import Workflow from './components/Workflow'
 import Membership from './components/Membership'
 import Pricing from './components/Pricing'
 import Testimonials from './components/Testimonials'
 import FAQ from './components/FAQ'
+import HowItWorks from './components/HowItWorks'
 import CommunityCTA from './components/CommunityCTA'
+import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
 
 export default function App() {
@@ -21,12 +22,13 @@ export default function App() {
       <TrustBar />
       <SuiteOverview />
       <FeatureCards />
-      <Workflow />
       <Membership />
       <Pricing />
       <Testimonials />
       <FAQ />
+      <HowItWorks />
       <CommunityCTA />
+      <FinalCTA />
       <Footer />
     </div>
   )

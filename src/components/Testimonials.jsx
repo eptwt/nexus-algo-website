@@ -12,7 +12,7 @@ const testimonials = [
     name: 'Sarah K.',
     initials: 'SK',
     stars: 5,
-    text: '"I used to have 6 indicators cluttering my chart and still second-guessed myself. Nexus Algo replaced all of them. The workflow is so clean — signal, strategy, confirmation. Done."',
+    text: '"I used to have 6 indicators cluttering my chart and still second-guessed myself. Nexus Algo replaced all of them. The workflow is so clean - signal, strategy, confirmation. Done."',
   },
   {
     name: 'Marcus T.',
@@ -24,7 +24,7 @@ const testimonials = [
     name: 'Alex R.',
     initials: 'AR',
     stars: 5,
-    text: '"Smart Money Concepts built right into the overlay — no separate indicator needed. The volume-ranked order blocks actually tell you which zones matter. Game changer for my ICT-style trading."',
+    text: '"Smart Money Concepts built right into the overlay - no separate indicator needed. The volume-ranked order blocks actually tell you which zones matter. Game changer for my ICT-style trading."',
   },
   {
     name: 'David L.',
@@ -36,7 +36,7 @@ const testimonials = [
     name: 'Priya N.',
     initials: 'PN',
     stars: 5,
-    text: '"Finally an indicator that respects my intelligence. No fake promises, no \'guaranteed profits\' — just a solid system that helps me make better decisions. The Discord community is incredibly helpful too."',
+    text: '"Finally an indicator that respects my intelligence. No fake promises, no \'guaranteed profits\' - just a solid system that helps me make better decisions. The Discord community is incredibly helpful too."',
   },
 ]
 

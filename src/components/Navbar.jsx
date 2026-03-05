@@ -9,6 +9,7 @@ export default function Navbar() {
     { label: 'Pricing', href: '#pricing' },
     { label: 'Testimonials', href: '#testimonials' },
     { label: 'FAQ', href: '#faq' },
+    { label: 'Discord', href: 'https://discord.gg/nexusalgo', external: true },
   ]
 
   return (
@@ -25,6 +26,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
+              {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               {link.label}
@@ -39,7 +41,7 @@ export default function Navbar() {
             className="rounded-full px-5 h-9 inline-flex items-center text-sm font-semibold text-white hover:opacity-90 transition-opacity"
             style={{ background: 'linear-gradient(135deg, hsl(280 85% 55%), hsl(300 90% 60%), hsl(320 85% 55%))' }}
           >
-            Get Started
+            Get Nexus Algo
           </a>
         </div>
 
@@ -71,7 +73,7 @@ export default function Navbar() {
             className="mt-2 w-full rounded-full py-3 inline-flex items-center justify-center text-sm font-semibold text-white"
             style={{ background: 'linear-gradient(135deg, hsl(280 85% 55%), hsl(300 90% 60%), hsl(320 85% 55%))' }}
           >
-            Get Started
+            Get Nexus Algo
           </a>
         </div>
       )}

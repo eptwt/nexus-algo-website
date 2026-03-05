@@ -1,44 +1,37 @@
-import { Zap, BookOpen, ChartColumnBig } from 'lucide-react'
+import { UserPlus, CreditCard, TrendingUp } from 'lucide-react'
 
 const steps = [
   {
-    icon: Zap,
+    icon: UserPlus,
     number: '01',
-    title: 'Signal',
-    subtitle: 'Identify Direction',
+    title: 'Create a TradingView Account',
     description:
-      'A signal fires on PRO and gives you directional bias. The tiered system tells you how strong the conditions are.',
+      'Sign up for TradingView Essential or higher. If you already have an account, skip to step 2.',
   },
   {
-    icon: BookOpen,
+    icon: CreditCard,
     number: '02',
-    title: 'Strategy',
-    subtitle: 'Build Your Plan',
+    title: 'Get Your Nexus Algo Membership',
     description:
-      'Match the signal to a named strategy - The Structure Flip, The OB Bounce, The Confluence Stack - which gives you exact rules for entry, stop, and target.',
+      "Choose your plan and connect your TradingView username. You'll receive instant access to all three indicators.",
   },
   {
-    icon: ChartColumnBig,
+    icon: TrendingUp,
     number: '03',
-    title: 'Confirmation',
-    subtitle: 'Validate the Setup',
+    title: 'Start Trading',
     description:
-      'Check the Oscillator to confirm momentum, volume, and RSI support the trade. No more guessing if the setup has real order flow behind it.',
+      'Open TradingView, go to Indicators → Invite-Only Scripts, and add Nexus Algo PRO, Oscillator, and News Ghost to your chart.',
   },
 ]
 
-export default function Workflow() {
+export default function HowItWorks() {
   return (
     <section className="py-16 sm:py-24 relative overflow-hidden section-divider">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-4 font-[family-name:var(--font-display)]">
-            The Workflow That Replaces Guesswork
+            Get Started in 3 Minutes
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Signal tells you where to look. Strategy tells you how to trade. Oscillator tells you whether the trade
-            is backed by real order flow.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -61,8 +54,7 @@ export default function Workflow() {
                     STEP {step.number}
                   </span>
                 </div>
-                <h3 className="text-lg font-bold mb-1">{step.title}</h3>
-                <p className="text-sm font-medium text-primary mb-2">{step.subtitle}</p>
+                <h3 className="text-lg font-bold mb-2">{step.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
               </div>
             )

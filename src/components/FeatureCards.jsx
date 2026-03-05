@@ -11,13 +11,13 @@ const features = [
   {
     label: 'Main Chart Overlay',
     icon: ChartColumnBig,
-    headline: 'Your Entire Market Read — One Indicator',
+    headline: 'Your Entire Market Read - One Indicator',
     description:
-      'Nexus Algo PRO replaces the patchwork of tools cluttering your chart. Trend direction, signal tiers, order blocks, fair value gaps, liquidity sweeps, market structure breaks, and auto-calculated TP/SL levels — all in a single overlay that adapts to what the market is actually doing.',
+      'Nexus Algo PRO replaces the patchwork of tools cluttering your chart. Trend direction, signal tiers, order blocks, fair value gaps, liquidity sweeps, market structure breaks, and auto-calculated TP/SL levels - all in a single overlay that adapts to what the market is actually doing.',
     bullets: [
       'Trend Ribbon with gradient candle coloring shows conviction at a glance',
       '3-tier signal system (BUY → STRONG → PREMIUM) gives you context, not just arrows',
-      'Smart Money Concepts built in — order blocks, FVGs, liquidity sweeps, BOS/CHoCH',
+      'Smart Money Concepts built in - order blocks, FVGs, liquidity sweeps, BOS/CHoCH',
     ],
     color: 'primary',
   },
@@ -28,7 +28,7 @@ const features = [
     description:
       "Signals without confirmation are just decoration. The Oscillator sits below your chart and answers the one question that matters: is there actual momentum, volume, and RSI behind this move? Dynamic zones shift with the trend so you stop getting faked out by static overbought/oversold levels that don't account for market context.",
     bullets: [
-      'RSI with dynamic zones — thresholds shift based on trend direction',
+      'RSI with dynamic zones - thresholds shift based on trend direction',
       'Momentum histogram shows acceleration vs. deceleration in real time',
       'Volume delta estimation reveals whether buyers or sellers are in control',
     ],
@@ -37,9 +37,9 @@ const features = [
   {
     label: 'Event Overlay',
     icon: Brain,
-    headline: 'See What Happened Last Time — Before It Happens Again',
+    headline: 'See What Happened Last Time - Before It Happens Again',
     description:
-      "NFP, CPI, FOMC — these events move markets in minutes. Instead of guessing, Nexus Algo projects ghost candles from up to 6 previous events directly onto your current chart. You see the actual historical price action, normalized to today's price level, so you can plan entries, stops, and targets around what the data says — not what Twitter thinks.",
+      "NFP, CPI, FOMC - these events move markets in minutes. Instead of guessing, Nexus Algo projects ghost candles from up to 6 previous events directly onto your current chart. You see the actual historical price action, normalized to today's price level, so you can plan entries, stops, and targets around what the data says - not what Twitter thinks.",
     bullets: [
       'Ghost candles from previous events rendered at current price with fading opacity',
       'Average path line shows consensus direction and magnitude of typical moves',
@@ -52,7 +52,7 @@ const features = [
     icon: Target,
     headline: 'Not All Signals Are Created Equal',
     description:
-      "Most indicators give you one signal and wish you luck. Nexus Algo's tiered conviction system gives you context on how strongly conditions align. A basic BUY means the trend is favorable. A STRONG BUY means volume and RSI support the bias. A PREMIUM BUY means structure, momentum, and higher timeframes all agree.",
+      "Most indicators give you one signal and wish you luck. Nexus Algo's tiered conviction system gives you context on how strongly conditions align. A basic BUY means the trend is favorable. A STRONG BUY means volume and RSI support the bias. A PREMIUM BUY means structure, momentum, and higher timeframes all agree. Signals tell you where to look - pair them with Nexus Algo's named strategies to build your actual trade plan.",
     bullets: [
       'BUY/SELL for directional bias in trending conditions',
       'STRONG signals add volume and RSI confirmation',
@@ -65,7 +65,7 @@ const features = [
     icon: Search,
     headline: 'See Where the Big Players Are Positioned',
     description:
-      'Retail traders need 4-5 separate indicators to map order blocks, fair value gaps, liquidity sweeps, and market structure. Nexus Algo integrates all of it into one overlay — with volume-ranked order blocks that tell you which zones actually matter, mitigation tracking that keeps context on screen, and confluence detection that highlights where multiple institutional concepts stack.',
+      'Retail traders need 4-5 separate indicators to map order blocks, fair value gaps, liquidity sweeps, and market structure. Nexus Algo integrates all of it into one overlay - with volume-ranked order blocks that tell you which zones actually matter, mitigation tracking that keeps context on screen, and confluence detection that highlights where multiple institutional concepts stack.',
     bullets: [
       'Order blocks with LOUD / HIGH / Soft volume ranking',
       'Fair value gaps with auto-extension and noise filtering',
@@ -78,7 +78,7 @@ const features = [
     icon: Lightbulb,
     headline: '14 Data Points. One Glance. Complete Clarity.',
     description:
-      "No more flipping between timeframes to piece together a bias. The dashboard gives you trend direction across 4 timeframes, live RSI, ATR, volume, signal counts, structure bias, trailing stop status, session bias, R:R ratio, and confluence zone count — all updating in real time. It's the command center that turns scattered information into a single, informed view of the market.",
+      "No more flipping between timeframes to piece together a bias. The dashboard gives you trend direction across 4 timeframes, live RSI, ATR, volume, signal counts, structure bias, trailing stop status, session bias, R:R ratio, and confluence zone count - all updating in real time. It's the command center that turns scattered information into a single, informed view of the market.",
     bullets: [
       '4-timeframe trend confluence scoring',
       'Live R:R calculation and trailing stop status',

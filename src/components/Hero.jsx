@@ -30,7 +30,7 @@ export default function Hero() {
         <p
           className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8"
         >
-          3 indicators. 13+ features. One complete trading system — built for traders who want
+          3 indicators. 13+ features. One complete trading system - built for traders who want
           institutional-grade analysis without the clutter.
         </p>
 
