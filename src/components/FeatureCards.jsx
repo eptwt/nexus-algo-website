@@ -7,10 +7,18 @@ import {
   Lightbulb,
 } from 'lucide-react'
 
+import nexusalgoPro from '../assets/nexusalgo_pro.png'
+import nexusalgoOscillator from '../assets/nexusalgo_oscillator.png'
+import nexusalgoNewsghost from '../assets/nexusalgo_newsghost.png'
+import nexusalgoSignals from '../assets/nexusalgo_signals.png'
+import nexusalgoSMC from '../assets/nexusalgo_SMC.png'
+import nexualgoDashboard from '../assets/nexusalgo_Dashboard.png'
+
 const features = [
   {
     label: 'Main Chart Overlay',
     icon: ChartColumnBig,
+    image: nexusalgoPro,
     headline: 'Your Entire Market Read - One Indicator',
     description:
       'Nexus Algo PRO replaces the patchwork of tools cluttering your chart. Trend direction, signal tiers, order blocks, fair value gaps, liquidity sweeps, market structure breaks, and auto-calculated TP/SL levels - all in a single overlay that adapts to what the market is actually doing.',
@@ -24,6 +32,7 @@ const features = [
   {
     label: 'Confirmation Pane',
     icon: TrendingUp,
+    image: nexusalgoOscillator,
     headline: 'Now You Know If the Signal Is Real',
     description:
       "Signals without confirmation are just decoration. The Oscillator sits below your chart and answers the one question that matters: is there actual momentum, volume, and RSI behind this move? Dynamic zones shift with the trend so you stop getting faked out by static overbought/oversold levels that don't account for market context.",
@@ -37,6 +46,7 @@ const features = [
   {
     label: 'Event Overlay',
     icon: Brain,
+    image: nexusalgoNewsghost,
     headline: 'See What Happened Last Time - Before It Happens Again',
     description:
       "NFP, CPI, FOMC - these events move markets in minutes. Instead of guessing, Nexus Algo projects ghost candles from up to 6 previous events directly onto your current chart. You see the actual historical price action, normalized to today's price level, so you can plan entries, stops, and targets around what the data says - not what Twitter thinks.",
@@ -50,6 +60,7 @@ const features = [
   {
     label: 'Directional Bias Engine',
     icon: Target,
+    image: nexusalgoSignals,
     headline: 'Not All Signals Are Created Equal',
     description:
       "Most indicators give you one signal and wish you luck. Nexus Algo's tiered conviction system gives you context on how strongly conditions align. A basic BUY means the trend is favorable. A STRONG BUY means volume and RSI support the bias. A PREMIUM BUY means structure, momentum, and higher timeframes all agree. Signals tell you where to look - pair them with Nexus Algo's named strategies to build your actual trade plan.",
@@ -63,6 +74,7 @@ const features = [
   {
     label: 'Institutional Footprints',
     icon: Search,
+    image: nexusalgoSMC,
     headline: 'See Where the Big Players Are Positioned',
     description:
       'Retail traders need 4-5 separate indicators to map order blocks, fair value gaps, liquidity sweeps, and market structure. Nexus Algo integrates all of it into one overlay - with volume-ranked order blocks that tell you which zones actually matter, mitigation tracking that keeps context on screen, and confluence detection that highlights where multiple institutional concepts stack.',
@@ -76,6 +88,7 @@ const features = [
   {
     label: 'Real-Time Intelligence',
     icon: Lightbulb,
+    image: nexualgoDashboard,
     headline: '14 Data Points. One Glance. Complete Clarity.',
     description:
       "No more flipping between timeframes to piece together a bias. The dashboard gives you trend direction across 4 timeframes, live RSI, ATR, volume, signal counts, structure bias, trailing stop status, session bias, R:R ratio, and confluence zone count - all updating in real time. It's the command center that turns scattered information into a single, informed view of the market.",
@@ -142,64 +155,19 @@ function FeatureCard({ feature, index }) {
           </ul>
         </div>
 
-        {/* Chart mock */}
+        {/* Feature image */}
         <div className="flex-1">
-          <ChartMock feature={feature} colors={colors} />
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function ChartMock({ colors }) {
-  const bars = Array.from({ length: 30 }, (_, i) => ({
-    height: 20 + Math.random() * 60,
-    top: 10 + Math.random() * 30,
-    green: Math.random() > 0.4,
-  }))
-
-  return (
-    <div className="bg-[#131722] rounded-xl border border-[#2a2e39] overflow-hidden h-[220px] sm:h-[260px] md:h-[300px] relative">
-      {/* Grid lines */}
-      <div className="absolute inset-0 grid-background opacity-30" />
-
-      {/* Candles */}
-      <div className="absolute inset-4 flex items-end gap-[2px]">
-        {bars.map((bar, i) => (
-          <div
-            key={i}
-            className="flex-1 rounded-sm"
-            style={{
-              height: `${bar.height}%`,
-              backgroundColor: bar.green ? 'rgb(0, 230, 118)' : 'rgb(255, 0, 0)',
-              opacity: 0.7,
-              marginTop: `${bar.top}%`,
-            }}
+          <img
+            src={feature.image}
+            alt={feature.headline}
+            className="w-full rounded-xl border border-[#2a2e39] bg-[#131722] object-cover"
           />
-        ))}
-      </div>
-
-      {/* Signal label */}
-      <div className="absolute top-4 right-4 px-2 py-1 rounded bg-[#00e676]/20 text-[#00e676] text-[10px] font-bold font-[family-name:var(--font-data)]">
-        STRONG BUY
-      </div>
-
-      {/* Dashboard mini */}
-      <div className="absolute bottom-3 right-3 bg-[#1e222d] border border-[#2a2e39] rounded-lg px-3 py-2">
-        <div className="text-[9px] text-[#787b86] font-[family-name:var(--font-mono)]">
-          <div className="flex justify-between gap-4">
-            <span>Trend</span>
-            <span className="text-[#00e676]">Bullish</span>
-          </div>
-          <div className="flex justify-between gap-4">
-            <span>R:R</span>
-            <span className="text-[#d1d4dc]">1:2.4</span>
-          </div>
         </div>
       </div>
     </div>
   )
 }
+
 
 export default function FeatureCards() {
   return (
