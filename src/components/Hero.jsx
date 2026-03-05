@@ -10,8 +10,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
         {/* Social proof badge */}
         <div
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/10 mb-6 animate-fade-in"
-          style={{ animationDelay: '0ms' }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/10 mb-6"
         >
           <TrendingUp className="w-4 h-4 text-primary" />
           <span className="text-xs sm:text-sm font-medium text-primary">
@@ -21,8 +20,7 @@ export default function Hero() {
 
         {/* Headline */}
         <h1
-          className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 font-[family-name:var(--font-display)] animate-scale-in"
-          style={{ animationDelay: '0.1s' }}
+          className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 font-[family-name:var(--font-display)]"
         >
           The Trading System That{' '}
           <span className="text-gradient">Simplifies Your Entire Chart</span>
@@ -30,8 +28,7 @@ export default function Hero() {
 
         {/* Subheadline */}
         <p
-          className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8 animate-fade-in"
-          style={{ animationDelay: '0.2s' }}
+          className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8"
         >
           3 indicators. 13+ features. One complete trading system — built for traders who want
           institutional-grade analysis without the clutter.
@@ -39,8 +36,7 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 animate-fade-in"
-          style={{ animationDelay: '0.3s' }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
         >
           <a
             href="#pricing"
@@ -65,8 +61,7 @@ export default function Hero() {
 
         {/* Trust indicators */}
         <div
-          className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground animate-fade-in"
-          style={{ animationDelay: '0.4s' }}
+          className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground"
         >
           <span className="flex items-center gap-1.5">
             <div className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
