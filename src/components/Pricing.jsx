@@ -7,6 +7,7 @@ const plans = [
     period: 'per month',
     originalPrice: '$79.99',
     featured: false,
+    href: 'https://whop.com/checkout/plan_dT9drDkGdJc1d',
     cta: 'Start 7-Day Risk-Free Trial',
     features: [
       'Full access to all 3 indicators',
@@ -25,6 +26,7 @@ const plans = [
     featured: true,
     badge: 'Most Popular',
     savings: 'Save 35%',
+    href: 'https://whop.com/checkout/plan_l6EMvEvMBRg62',
     cta: 'Start 7-Day Risk-Free Trial',
     features: [
       'Everything in Monthly',
@@ -91,7 +93,7 @@ export default function Pricing() {
                 <p className="text-sm text-muted-foreground mb-6">{plan.period}</p>
 
                 <a
-                  href="#"
+                  href={plan.href}
                   className="w-full rounded-full border border-white/20 text-sm font-medium text-[#f8fafc] hover:scale-105 hover:shadow-[0_0_30px_rgba(173,43,238,0.4)] transition-all duration-300 flex items-center justify-center gap-2"
                   style={{
                     backgroundImage: 'linear-gradient(135deg, rgb(173, 43, 238), rgb(245, 61, 245), rgb(238, 43, 173))',
