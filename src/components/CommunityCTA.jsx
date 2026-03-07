@@ -1,4 +1,4 @@
-import { MessageCircle, Mail } from 'lucide-react'
+import { MessageCircle } from 'lucide-react'
 
 export default function CommunityCTA() {
   return (
@@ -17,7 +17,7 @@ export default function CommunityCTA() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="max-w-md mx-auto">
           {/* Discord Card */}
           <div className="bg-card border border-border/50 rounded-xl p-6 sm:p-8 text-center hover:border-[#5865F2]/30 transition-all duration-300">
             <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#5865F2]/20 mb-5">
@@ -39,31 +39,6 @@ export default function CommunityCTA() {
               <MessageCircle className="w-5 h-5" />
               Join Discord Now
             </a>
-          </div>
-
-          {/* Mailing List Card */}
-          <div className="bg-card border border-border/50 rounded-xl p-6 sm:p-8 text-center hover:border-primary/30 transition-all duration-300">
-            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/20 mb-5">
-              <Mail className="w-7 h-7 text-primary" />
-            </div>
-            <h3 className="text-lg font-bold mb-2">Join Mailing List for Updates</h3>
-            <p className="text-sm text-muted-foreground mb-5">
-              Get notified about new features, strategies, and trading insights.
-            </p>
-            <form onSubmit={(e) => e.preventDefault()} className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 rounded-full px-4 py-2.5 text-sm bg-secondary border border-border/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
-              />
-              <button
-                type="submit"
-                className="rounded-full px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
-                style={{ background: 'linear-gradient(135deg, hsl(280 85% 55%), hsl(300 90% 60%), hsl(320 85% 55%))' }}
-              >
-                Subscribe
-              </button>
-            </form>
           </div>
         </div>
       </div>

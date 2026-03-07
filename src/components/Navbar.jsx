@@ -14,14 +14,14 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between relative">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
           <img src="/logo.png" alt="Nexus Algo" className="w-12 h-12 object-contain" />
         </a>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop Nav - absolutely centered on page */}
+        <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           {links.map((link) => (
             <a
               key={link.label}
@@ -36,7 +36,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-<a
+          <a
             href="#pricing"
             className="rounded-full px-5 h-9 inline-flex items-center text-sm font-semibold text-white hover:opacity-90 transition-opacity"
             style={{ background: 'linear-gradient(135deg, hsl(280 85% 55%), hsl(300 90% 60%), hsl(320 85% 55%))' }}

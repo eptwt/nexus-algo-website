@@ -1,23 +1,59 @@
-import { Play } from 'lucide-react'
+import { useEffect } from 'react'
 
 export default function VSL() {
+  useEffect(() => {
+    const v = window
+    const i = document
+    const d = 'Vidalytics'
+    const a = 'vidalytics_embed_8gG043T4fSzhqxXA'
+    const l = 'https://fast.vidalytics.com/embeds/xaUDT7_4/8gG043T4fSzhqxXA/'
+    const y = '_' + d.toLowerCase()
+    const c = d + 'L'
+
+    if (!v[d]) v[d] = {}
+    if (!v[c]) v[c] = {}
+    if (!v[y]) v[y] = {}
+
+    const vl = 'Loader'
+    let vli = v[y][vl]
+    let vsl = v[c][vl + 'Script']
+    let vlf = v[c][vl + 'Loaded']
+    let t
+    const ve = 'Embed'
+
+    if (!vsl) {
+      vsl = function (u, cb) {
+        if (t) { cb(); return }
+        const s = i.createElement('script')
+        s.type = 'text/javascript'
+        s.async = 1
+        s.src = u
+        s.onload = function () { vlf = 1; cb() }
+        i.getElementsByTagName('head')[0].appendChild(s)
+      }
+    }
+
+    vsl(l + 'loader.min.js', function () {
+      if (!vli) {
+        const vlc = v[c][vl]
+        vli = new vlc()
+      }
+      vli.loadScript(l + 'player.min.js', function () {
+        const vec = v[d][ve]
+        t = new vec()
+        t.run(a)
+      })
+    })
+  }, [])
+
   return (
     <section className="py-8 sm:py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="relative rounded-2xl overflow-hidden bg-card border border-border/40 shadow-2xl">
-          {/* Video placeholder */}
-          <div className="aspect-video bg-[#131722] flex items-center justify-center relative group cursor-pointer">
-            {/* Play button */}
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-primary/90 flex items-center justify-center shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform duration-300">
-              <Play className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1" />
-            </div>
-            {/* Overlay gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-            {/* Label */}
-            <p className="absolute bottom-4 left-0 right-0 text-center text-sm text-white/70 font-medium">
-              Watch: How Nexus Algo Helps You Read the Market
-            </p>
-          </div>
+          <div
+            id="vidalytics_embed_8gG043T4fSzhqxXA"
+            style={{ width: '100%', position: 'relative', paddingTop: '56.25%' }}
+          />
         </div>
       </div>
     </section>

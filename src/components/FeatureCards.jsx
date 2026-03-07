@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   ChartColumnBig,
   TrendingUp,
@@ -110,7 +111,7 @@ const colorMap = {
   sky: { bg: 'bg-sky-500/10', border: 'border-sky-500/20', text: 'text-sky-400' },
 }
 
-function FeatureCard({ feature, index }) {
+function FeatureCard({ feature, index, onImageClick }) {
   const colors = colorMap[feature.color]
   const Icon = feature.icon
   const isReversed = index % 2 === 1
@@ -160,7 +161,8 @@ function FeatureCard({ feature, index }) {
           <img
             src={feature.image}
             alt={feature.headline}
-            className="w-full rounded-xl border border-[#2a2e39] bg-[#131722] object-cover"
+            className="w-full rounded-xl border border-[#2a2e39] bg-[#131722] object-cover cursor-pointer hover:opacity-90 transition-opacity"
+            onClick={() => onImageClick(feature.image, feature.headline)}
           />
         </div>
       </div>
@@ -170,13 +172,41 @@ function FeatureCard({ feature, index }) {
 
 
 export default function FeatureCards() {
+  const [lightbox, setLightbox] = useState(null)
+
   return (
     <section className="pb-16 sm:pb-24 relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 space-y-8 sm:space-y-12">
         {features.map((feature, index) => (
-          <FeatureCard key={feature.label} feature={feature} index={index} />
+          <FeatureCard
+            key={feature.label}
+            feature={feature}
+            index={index}
+            onImageClick={(src, alt) => setLightbox({ src, alt })}
+          />
         ))}
       </div>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center cursor-pointer p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white/70 hover:text-white text-4xl font-light leading-none"
+            onClick={() => setLightbox(null)}
+          >
+            &times;
+          </button>
+          <img
+            src={lightbox.src}
+            alt={lightbox.alt}
+            className="max-w-full max-h-[90vh] object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   )
 }
